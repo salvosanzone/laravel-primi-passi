@@ -17,13 +17,23 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-          
       </div>
     </div>
   </nav>
   <div class="container d-flex flex-column align-items-center my-2">
     <h2>MAGNUM PHOTOGRAPHERS</h2>
     <h6>Magnum Photos is a co-operative owned and run by its member photographers, who undergo a rigorous process of self-selection in order to become full members. The photographers meet once a year, during the last weekend in June, in New York, Paris or London, to discuss Magnum’s affairs.</h6>
+  </div>
+  <div class="container text-center my-4">
+    <ul class="d-flex">
+      @foreach ($photographers as $photographer)
+      <li class="mx-2">
+        <a class="mx-2" href="{{route('koudelka')}}">
+          {{ $photographer }}
+        </a>
+      </li>
+      @endforeach
+    </ul>
   </div>
 </body>
 </html>

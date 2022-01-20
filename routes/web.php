@@ -17,6 +17,17 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/koudelka', function () {
+    return view('koudelka');
+})->name('koudelka');
+
 Route::get('/photographers', function () {
-    return view('photographers');
+
+    $data = [
+        'photographers' => [
+          'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'  
+        ]
+    ];
+
+    return view('photographers',$data);
 })->name('photographers');
